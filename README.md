@@ -103,8 +103,8 @@ Le challenge nous mène sur une page dont l’url est la suivante :
 « http://challenge01.root-me.org/web-serveur/ch11/ »
 
 On ajoute à la fin de cet URL “index.php~” qui va donc nous permettre de visualiser le contenu du fichier. 
+![image](https://user-images.githubusercontent.com/91453648/168332121-e5dc629e-727d-4434-ad91-3ae41202d57a.png)
 
- 
 
 Le mot de passe est donc apparent dans le fichier. 
 La solution est   “OCCY9AcNm1tj”.
@@ -115,19 +115,23 @@ Install Files:
 
 En observant le code source de la page, on trouve ceci : 
 
- 
+ ![image](https://user-images.githubusercontent.com/91453648/168332158-95e5a11e-aa34-4db1-8a54-6eb50c7fd33a.png)
+
 
 Après quelque recherche sur google sur phpbb, je suis tombé sur ca: 
 
- 
+ ![image](https://user-images.githubusercontent.com/91453648/168332174-110e093d-9d93-4117-80ee-356c806e774c.png)
+
 
 J’ai donc ajouté à l’url phpbb/install/ puis suis arrivé sur la page ci-dessous. 
 
- 
+ ![image](https://user-images.githubusercontent.com/91453648/168332190-a04e8a58-788c-4098-8c00-1945b7e8ae60.png)
+
 
 Après avoir installé le fichier “install.php”, on obtient le message suivant : 
 
 
+![image](https://user-images.githubusercontent.com/91453648/168332199-883d6367-11d1-4d8b-832c-fccb3eabf516.png)
 
 
 
