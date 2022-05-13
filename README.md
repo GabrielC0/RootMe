@@ -2,24 +2,24 @@
 RootMe du groupe Gabriel C, Benjamin D et Romain M
 
 
-### Challenge client web
+# Challenge client web
 
 ## Javascript - Obfuscation 3
 
-# Première tentative :
+### Première tentative :
 
 Essayer différents password de base :
 -admin -0000 -1234 -motdepasse -code
 Idée non concluante  
 
-# Deuxième tentative :
+### Deuxième tentative :
 
 Regarder dans le code et je me rend compte que dans tout les cas il indique que le mdp est faux dans il faut rentrer le mdp directement sur la page daceuil .
 Lecture de la ligne : « var pass = "70,65,85,88,32,80,65,83,83,87,79,82,68,32,72,65,72,65"; »
 Essaie des différents chiffres en tant que mot de passe.
 Idée non concluante  
 
-# Troisième tentative :
+### Troisième tentative :
 
 Lecture de la ligne : » p += String.fromCharCode((o = tab2[i])); »
 Le « fromCharCode » prouve qu’il y a une conversion d’un type de caractère dans un tableau
@@ -28,20 +28,20 @@ Je passe cette ligne de nombre dans le tableau et le rentre dans le mot de passe
 « "70,65,85,88,32,80,65,83,83,87,79,82,68,32,72,65,72,65" »
 Idée non concluante  
 
-# Quatrième tentative :
+### Quatrième tentative :
 
 Je prends cette ligne et fait pareil.
 \x35\x35\x2c\x35\x36\x2c\x35\x34\x2c\x37\x39\x2c\x31\x31\x35\x2c\x36\x39\x2c\x31\x31\x34\x2c\x31\x31\x36\x2c\x31\x30\x37\x2c\x34\x39\x2c\x35\x30
 Idée non concluante  
 
-# Cinquième tentative :
+### Cinquième tentative :
 
 Puis je sélectionne cette ligne et je commence à le convertir en décimal car généralement le code son en décimal.
  « \x35\x35\x2c\x35\x36\x2c\x35\x34\x2c\x37\x39\x2c\x31\x31\x35\x2c\x36\x39\x2c\x31\x31\x34\x2c\x31\x31\x36\x2c\x31\x30\x37\x2c\x34\x39\x2c\x35\x30 »
 On obtient 55,56,54,79,115,69,114,116,107,49,5 ce n’est pas le mdp.
 Idée non concluante  
 
-# Sixième tentative :
+### Sixième tentative :
 
 
 Je décide donc d’analyser et d’effectuer un 
@@ -49,10 +49,9 @@ console.log(String.fromCharCode(55,56,54,79,115,69,114,116,107,49,50)); » et ce
 Ce qui donne : 786OsErtk12. 
 Chalenge réussi 
 
-
 ## XSS - Stockée 1
 
-# Première tentative : 
+### Première tentative : 
 
 Je regarde dans le code au cas où mais il y a aucun indice contenant le mdp mais je remarque que le champ texte est vulnérable à des injections de balise HTML et permet ainsi l'injection de code. Alors je fais un test en mettant <script>Alert.alert(« yo »)<script> et je suis sur la bonne piste car il affiche un pop-up donc le champ de texte est bien vulnérable à l’ingestion de code.
 
@@ -71,21 +70,22 @@ Puis inspecter les logs du site et je tombe sur ça :
 Chalenge réussi 
 
 ## SQL injection - Authentification
-Première tentative :
+ 
+###Première tentative :
 
 Essayer différents password de base :
 -admin -0000 -1234 -motdepasse -code
 On obtient alors une erreur avec le mot clés "near".
 Idée non concluante  
 
-# Deuxième tentative :
+### Deuxième tentative :
 
 Comme la base de données est une base sql on peux essayer de mettre une balise de commentaire « */ » pour que ca ne prenne pas en compte le contenue de ce commentaire.
 Login :  « admin ‘/**/ » 
 « ‘ » est ici car c’est username`='XXXX’
 Idée non concluante
 
-# Troisième tentative :  
+### Troisième tentative :  
 
 Essayer de laisser ouvert la ligne de commentaire pour « supprimer » le mdp ?
 Ce qui donnerai « admin' /* » et en mdp n’importe quoi car c’est en commentaire.
@@ -95,7 +95,7 @@ Chalenge réussi
 
 
 
-### Web serveur: 
+# Web serveur: 
 
 ## Fichier de sauvegardes :
 
@@ -140,7 +140,7 @@ Après avoir installé le fichier “install.php”, on obtient le message suiva
 
 
 
-### Réseaux: 
+# Réseaux: 
 
 ## Authentification twitter :
 
